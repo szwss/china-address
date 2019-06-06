@@ -1,0 +1,35 @@
+{
+    "name": "szwss/china-address",
+    "description": "一个关于 Laravel 的 中国行政区: 省份 城市 区县 乡镇 四级联动数据表生成,地址管理.数据来源于权威机构:民政部和国家统计局,keywords:china,province,city,area,town,address",
+    "keywords": [
+        "china",
+        "province",
+        "city",
+        "area",
+        "town",
+        "address"
+    ],
+    "type": "library",
+    "authors": [
+        {
+            "name": "szwss",
+            "email": "szwss@qq.com",
+            "homepage": "https://xuexishu.com"
+        }
+    ],
+    "require": {
+        "overtrue/laravel-pinyin": "4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Szwss\\ChinaAddress\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Szwss\\ChinaAddress\\ChinaAddressServiceProvider"
+            ]
+        }
+    }
+}
