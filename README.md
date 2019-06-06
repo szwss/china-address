@@ -20,26 +20,26 @@ artisan vendor:publish --provider="Szwss\ChinaAddress\ChinaAddressServiceProvide
 ```
 php artisan migrate
 
-php artisan city:seed
+php artisan address:seed
 ```
 
-创建City model
+创建Address model
 
 ```
-php artisan make:model City -c
+php artisan make:model Address -c
 ```
 
-City model 中 使用 CityTrait
+Address model 中 使用 AddressTrait
 
 ```
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use Szwss\ChinaAddress\CityTrait;
+use Szwss\ChinaAddress\AddressTrait;
 
-class City extends Model
+class Address extends Model
 {
-    use CityTrait;
+    use AddressTrait;
 
     public $timestamps = false;
 
@@ -57,8 +57,12 @@ class City extends Model
 ```
 
 ### trait 方法
-parent 父级城市
+parent() 父级地址
 
-children 子城市
+children() 子地址
+
+getFullPath($joiner) 获取完整的地址字符串,$joiner可选参数,地址字符串的拼接符,默认为' '
+
+allChildren() 获取所有的用户,包含各级的children
 
 待完善...
