@@ -41,8 +41,8 @@ class ImportAddress extends Command
         if (Address::count()) {
             return $this->error('数据库有数据，请先清理数据库');
         }
-        $this->seeding('直辖市','pcas-code-zxs.json');
-        $this->seeding('省份','pcas-code.json');
+        $this->seeding('直辖市/省份','pcas-code.json');
+        $this->seeding('港澳台','HK-MO-TW.json');
     }
 
     private function seeding($type,$file_name)

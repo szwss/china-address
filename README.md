@@ -15,6 +15,9 @@
 发布migration文件 并填充数据
 
 ```
+composer require szwss/china-address
+```
+```
 artisan vendor:publish --provider="Szwss\ChinaAddress\ChinaAddressServiceProvider"
 ```
 ```
