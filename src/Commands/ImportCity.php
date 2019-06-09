@@ -42,7 +42,7 @@ class ImportAddress extends Command
             return $this->error('数据库有数据，请先清理数据库');
         }
         $this->seeding('直辖市/省份','pcas-code.json');
-        //$this->seeding('港澳台','HK-MO-TW.json');//不含 code?
+        $this->seeding('港澳台','HK-MO-TW-WSS.json');//原数据不含code,20190609重新整理
     }
 
     private function seeding($type,$file_name)
