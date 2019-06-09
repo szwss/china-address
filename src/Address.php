@@ -27,10 +27,10 @@ class Address extends Model
         static::creating(function ($model) {
 
             //20190604如果 code 小于等于 4 位时才执行
-            if(strlen($model->code) <= 6) {
-                $pinyin = \Pinyin::abbr($model->name,'');
-                $model->name_pinyin = $pinyin;
-            }
+//            if(strlen($model->code) <= 6) {
+//                $pinyin = \Pinyin::abbr($model->name,'');
+//                $model->name_pinyin = $pinyin;
+//            }
 
         });
     }
