@@ -48,7 +48,6 @@ class ImportAddress extends Command
         $this->seeding('城市','json/city.json');
         $this->seeding('区/县','json/area.json');
         $this->seeding('乡/镇/街道办','json/street.json');
-
         //$this->seeding('港澳台','HK-MO-TW-WSS.json');//原数据不含code,20190609重新整理//20190609非联动数据包含港澳台
     }
     private function seeding($type,$file_name)
@@ -70,7 +69,7 @@ class ImportAddress extends Command
             $create = array('code'=>$code,'name'=>$item['name'],'parent_code'=>$item['parent'] ?? null);
             $result = Address::create($create);
             if(!$result){
-                return $this->error('填充出错...');;
+                return $this->error('填充出错...');
             }
             $bar->advance();
         }
